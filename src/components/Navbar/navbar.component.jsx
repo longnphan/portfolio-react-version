@@ -1,58 +1,50 @@
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import GithubIcon from "../../assets/github-icon.png";
-import LinkedinIcon from "../../assets/linkedin-icon.png";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./navbar.styles.scss";
+
+// import GithubIcon from "../../assets/github-icon.png";
+// import LinkedinIcon from "../../assets/linkedin-icon.png";
 import Resume from "../../assets/LongPhanResume.pdf";
 
-const Navigation = () => {
+import "./navbar.styles.scss";
+
+const Navbar = () => {
+    const [navbarOpen, setNavBarOpen] = useState(false);
+
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand href="/">Long Phan</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link
-                                href="http://www.github.com/longnphan"
-                                target="_blank"
-                            >
-                                <img
-                                    src={GithubIcon}
-                                    alt="GitHub Icon"
-                                    width="32px"
-                                    height="32px"
-                                />
-                            </Nav.Link>
-                            <Nav.Link
-                                href="http://www.linkedin.com/in/longnphan"
-                                target="_blank"
-                            >
-                                <img
-                                    src={LinkedinIcon}
-                                    alt="Linkedin Icon"
-                                    width="32px"
-                                    height="32px"
-                                />
-                            </Nav.Link>
-                        </Nav>
-                        <Nav>
-                            <Nav.Link href="#projects">Projects</Nav.Link>
-                            <Nav.Link href={Resume} target="_blank">
-                                Resume
-                            </Nav.Link>
-                            <Nav.Link
-                                eventKey={2}
-                                href="mailto:longnphan@outlook.com"
-                            >
-                                Contact
-                            </Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
+            <nav className="nav">
+                <h1 className="nav__heading">Long Phan</h1>
+                <ul className={navbarOpen ? "nav__list.active" : "nav__list"}>
+                    <li className="nav__link" key="navHomeLink">
+                        <NavLink to="/" className="nav__a">
+                            Projects
+                        </NavLink>
+                    </li>
+                    <li className="nav__link">
+                        <a href={Resume} className="nav__a">
+                            Resume
+                        </a>
+                    </li>
+                    <li className="nav__link">
+                        <a
+                            href="mailto:longnphan@outlook.com"
+                            className="nav__a"
+                        >
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <button
+                    onClick={() => setNavBarOpen(prev => !prev)}
+                    type="button"
+                    className="nav__hamburger"
+                >
+                    <i className="fa fa-bars" />
+                </button>
+            </nav>
         </>
     );
 };
 
-export default Navigation;
+export default Navbar;
