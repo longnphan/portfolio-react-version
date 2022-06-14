@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./navbar.styles.scss";
-
-// import GithubIcon from "../../assets/github-icon.png";
-// import LinkedinIcon from "../../assets/linkedin-icon.png";
 import Resume from "../../assets/LongPhanResume.pdf";
-
 import "./navbar.styles.scss";
 
 const Navbar = () => {
