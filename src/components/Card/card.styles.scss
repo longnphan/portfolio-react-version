@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    background-color: #bbe1fa;
+    border-radius: 7px;
+    flex-direction: column;
+    margin: 2rem;
+    width: 75%;
+    &__heading {
+        background-color: #0f4c75;
+        border-radius: 7px 7px 0 0;
+        color: white;
+        padding: 1rem;
+    }
+}

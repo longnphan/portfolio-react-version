@@ -1,11 +1,15 @@
 import React from "react";
+import Card from "../components/Card/card.component";
+import "./landing.styles.scss";
 
 const Landing = () => {
     return (
         <>
-            <h1>This is the landing page</h1>
+            <div className="landing">
+                <Card />
+            </div>
         </>
     );
 };
 
-export default React;
+export default Landing;
