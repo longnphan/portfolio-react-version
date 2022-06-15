@@ -1,0 +1,28 @@
+.projectcard {
+    margin: 1rem;
+    &__btn {
+        background-color: #3282b8;
+        border: none;
+        border-radius: 7px;
+        color: white;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 1rem;
+        width: 100px;
+        &__right {
+            margin-left: 0.5rem;
+            width: 135px;
+        }
+    }
+    &__description {
+        margin-top: 1rem;
+        width: 80%;
+        &__italic {
+            font-style: italic;
+            margin-top: 1rem;
+        }
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+}
