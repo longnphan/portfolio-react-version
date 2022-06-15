@@ -14,7 +14,7 @@ const ProjectCard = ({
                 <video
                     controls
                     className="projectcard__video"
-                    width="500px"
+                    width="70%"
                     height="auto"
                     muted
                     preload="none"

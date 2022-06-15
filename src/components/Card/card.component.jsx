@@ -12,7 +12,7 @@ const Card = ({ cardHeading }) => {
                 <div className="card__heading">
                     <h1>{cardHeading}</h1>
                 </div>
-                <div>
+                <div className="card__container">
                     {projectData.map(
                         ({ description, id, stack, title, video }) => (
                             <ProjectCard
