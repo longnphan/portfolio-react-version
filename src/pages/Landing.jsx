@@ -2,11 +2,11 @@ import React from "react";
 import Card from "../components/Card/card.component";
 import "./landing.styles.scss";
 
-const Landing = () => {
+const Landing = ({ projectData }) => {
     return (
         <>
             <div className="landing">
-                <Card />
+                <Card cardHeading="Projects" />
             </div>
         </>
     );

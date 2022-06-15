@@ -1,11 +1,16 @@
 import React from "react";
 import "./projectcard.styles.scss";
 
-const ProjectCard = ({ projectHeading, projectDescription, projectStack }) => {
+const ProjectCard = ({
+    projectHeading,
+    projectDescription,
+    projectStack,
+    projectVideoUrl,
+}) => {
     return (
         <>
             <div className="projectcard">
-                <h1 className="projectcard__title">Project Name</h1>
+                <h1 className="projectcard__title">{projectHeading}</h1>
                 <video
                     controls
                     className="projectcard__video"
@@ -16,13 +21,13 @@ const ProjectCard = ({ projectHeading, projectDescription, projectStack }) => {
                     title=""
                     poster=""
                 >
-                    <source src="" type="video/mp4" />
+                    <source src={projectVideoUrl} type="video/mp4" />
                 </video>
                 <h3 className="projectcard__description__italic">
-                    Built using React.js
+                    {projectStack}
                 </h3>
                 <h3 className="projectcard__description">
-                    Example text for description of the project.
+                    {projectDescription}
                 </h3>
                 <div>
                     <button className="projectcard__btn">View App</button>
