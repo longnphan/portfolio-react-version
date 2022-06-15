@@ -4,8 +4,6 @@ import projectData from "../../assets/projects-data";
 import "./card.styles.scss";
 
 const Card = ({ cardHeading }) => {
-    // const { description, id, stack, title, video } = projectData;
-
     return (
         <>
             <div className="card">
