@@ -23,12 +23,10 @@ const ProjectCard = ({
                 >
                     <source src={projectVideoUrl} type="video/mp4" />
                 </video>
-                <h3 className="projectcard__description__italic">
+                <p className="projectcard__description projectcard__description__italic">
                     {projectStack}
-                </h3>
-                <h3 className="projectcard__description">
-                    {projectDescription}
-                </h3>
+                </p>
+                <p className="projectcard__description">{projectDescription}</p>
                 <div>
                     <button className="projectcard__btn">View App</button>
                     <button className="projectcard__btn projectcard__btn__right">

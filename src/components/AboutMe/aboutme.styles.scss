@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    background-color: #bbe1fa;
+    border-radius: 7px;
+    flex-direction: column;
+    margin: 1rem;
+    width: 80%;
+    &__container {
+        display: flex;
+    }
+    &__heading {
+        background-color: #0f4c75;
+        border-radius: 7px 7px 0 0;
+        color: white;
+        padding: 1rem;
+    }
+    &__paragraph {
+        padding: 1rem;
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        &__container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
